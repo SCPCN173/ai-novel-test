@@ -1,0 +1,256 @@
+# 示例剧本 - 由AI小说转剧本工具生成
+# 注意：这是一个示例模板，实际输出将由AI模型生成
+
+script:
+  metadata:
+    title: "青春的序曲"
+    original_novel: "青春故事"
+    author: "AI生成"
+    created_date: "2026-06-05"
+    version: "1.0"
+    total_chapters: 4
+    notes: "初稿，需要进一步打磨对话细节"
+
+  characters:
+    - id: "char_001"
+      name: "李明"
+      role: "主角"
+      description: "高三学生，阳光开朗，热爱篮球"
+      first_appearance: "scene_001"
+      age: 18
+      gender: "男"
+
+    - id: "char_002"
+      name: "王芳"
+      role: "主角"
+      description: "高三学生，温柔善良，李明的同班同学"
+      first_appearance: "scene_001"
+      age: 18
+      gender: "女"
+
+    - id: "char_003"
+      name: "张老师"
+      role: "配角"
+      description: "班主任，严厉但关心学生"
+      first_appearance: "scene_002"
+
+  scenes:
+    # 第一章场景
+    - id: "scene_001"
+      location: "教室"
+      time: "日"
+      description: "阳光明媚的教室，高三学生在上课"
+      chapter: 1
+      actions:
+        - type: "action"
+          content: "李明坐在后排，专注地看着窗外"
+
+        - type: "dialogue"
+          character_id: "char_001"
+          content: "今天的天气真好啊。"
+          note: "语气轻松，望向窗外"
+
+        - type: "dialogue"
+          character_id: "char_002"
+          content: "是啊，放学后我们去操场打篮球吧？"
+          note: "微笑着转身"
+
+        - type: "dialogue"
+          character_id: "char_001"
+          content: "好的，我很久没运动了。"
+          note: "点头，期待地"
+
+        - type: "dialogue"
+          character_id: "char_002"
+          content: "那就约定好了！"
+          note: "笑着说"
+
+        - type: "action"
+          content: "下课铃声响起，学生们收拾书包"
+
+        - type: "dialogue"
+          character_id: "char_003"
+          content: "同学们，下周就要开始高考复习了，大家要做好准备。"
+          note: "走进教室，严肃地"
+
+        - type: "action"
+          content: "李明和王芳相视一笑"
+
+        - type: "transition"
+          content: "切至：操场"
+
+    - id: "scene_002"
+      location: "操场"
+      time: "午后"
+      description: "夕阳西下的篮球场，金色的光芒洒在场地上"
+      chapter: 2
+      actions:
+        - type: "action"
+          content: "李明投篮，球精准进入篮筐"
+
+        - type: "dialogue"
+          character_id: "char_002"
+          content: "漂亮！你的篮球技术真好！"
+          note: "欢呼道"
+
+        - type: "dialogue"
+          character_id: "char_001"
+          content: "谢谢，我经常练习。其实篮球是我的爱好之一。"
+          note: "笑着说"
+
+        - type: "dialogue"
+          character_id: "char_002"
+          content: "我以前也喜欢打篮球，不过最近因为学业压力大，很久没打了。"
+          note: "眼中流露欣赏"
+
+        - type: "dialogue"
+          character_id: "char_001"
+          content: "没关系，今天我们一起练习，找回感觉。"
+          note: "拍拍篮球，鼓励地"
+
+        - type: "action"
+          content: "两人开始传球练习，篮球在空中来回飞舞"
+
+        - type: "dialogue"
+          character_id: "char_002"
+          content: "李明，谢谢你陪我打球。"
+          note: "感激地"
+
+        - type: "dialogue"
+          character_id: "char_001"
+          content: "不用客气，我们以后可以经常一起练习。"
+          note: "真诚地"
+
+        - type: "action"
+          content: "夕阳渐渐落下，操场上只剩下两人的身影"
+
+        - type: "transition"
+          content: "淡出"
+
+    - id: "scene_003"
+      location: "教室"
+      time: "日"
+      description: "学期结束的教室，黑板上有"高考加油"标语"
+      chapter: 3
+      actions:
+        - type: "dialogue"
+          character_id: "char_003"
+          content: "同学们，学期结束了，希望大家在假期好好复习，为高考做好准备。"
+          note: "站在讲台上，语重心长"
+
+        - type: "action"
+          content: "学生们安静地听着，思考自己的未来"
+
+        - type: "dialogue"
+          character_id: "char_001"
+          content: "王芳，假期我们保持联系吧。"
+          note: "看着王芳，不舍地"
+
+        - type: "dialogue"
+          character_id: "char_002"
+          content: "一定，我们下次再一起打篮球。"
+          note: "点头，眼中湿润"
+
+        - type: "dialogue"
+          character_id: "char_001"
+          content: "无论高考结果如何，我们的友谊不会改变。"
+          note: "坚定地承诺"
+
+        - type: "dialogue"
+          character_id: "char_002"
+          content: "谢谢你，李明。这是我高三最美好的回忆。"
+          note: "微笑，感动地"
+
+        - type: "action"
+          content: "放学铃声响起，学生们陆续离开教室"
+
+        - type: "action"
+          content: "李明和王芳走到操场边，看着空无一人的篮球场"
+
+        - type: "dialogue"
+          character_id: "char_001"
+          content: "这里见证了我们的友谊。"
+          note: "深情地"
+
+        - type: "dialogue"
+          character_id: "char_002"
+          content: "是的，我们会再回来的。"
+          note: "点头，充满希望"
+
+        - type: "action"
+          content: "两人并肩走出校门，夕阳余晖洒在他们身上"
+
+    - id: "scene_004"
+      location: "李明家中"
+      time: "日"
+      description: "两个月后的暑假，李明在打电话"
+      chapter: 4
+      actions:
+        - type: "dialogue"
+          character_id: "char_001"
+          content: "王芳，听说你考上了北京的大学，恭喜你！"
+          note: "打电话，兴奋地"
+
+        - type: "dialogue"
+          character_id: "char_002"
+          content: "谢谢！你也考上了上海的大学，真是太好了！"
+          note: "电话中，愉快地"
+
+        - type: "dialogue"
+          character_id: "char_001"
+          content: "虽然我们不在同一所大学，但我们的友谊不会因为距离而改变。"
+          note: "笑着说"
+
+        - type: "dialogue"
+          character_id: "char_002"
+          content: "李明，谢谢你一直以来的支持和鼓励。我会永远记住我们在篮球场上的那些时光。"
+          note: "感动道"
+
+        - type: "dialogue"
+          character_id: "char_001"
+          content: "王芳，无论我们在哪里，我们都要保持联系。假期我会回来看你。"
+          note: "认真地承诺"
+
+        - type: "dialogue"
+          character_id: "char_002"
+          content: "好的，我也会去上海看你。我们的友谊会一直延续下去。"
+          note: "愉快地说"
+
+        - type: "action"
+          content: "电话挂断，李明望着窗外"
+
+        - type: "direction"
+          content: "李明心中充满对未来的期待，这段友谊将成为最珍贵的财富"
+
+  outline:
+    - chapter: 1
+      title: "初遇"
+      summary: "李明和王芳在教室相遇，约定放学后打篮球"
+      key_events:
+        - "李明和王芳初次对话"
+        - "约定放学后打篮球"
+        - "张老师提醒高考复习"
+
+    - chapter: 2
+      title: "篮球场上的友谊"
+      summary: "两人在操场打篮球，友谊加深"
+      key_events:
+        - "一起打篮球"
+        - "分享对篮球的热爱"
+        - "友谊建立"
+
+    - chapter: 3
+      title: "告别与承诺"
+      summary: "学期结束，两人约定保持联系"
+      key_events:
+        - "学期结束"
+        - "交换联系方式"
+        - "承诺友谊不变"
+
+    - chapter: 4
+      title: "新的开始"
+      summary: "高考结束，两人分别考上大学，友谊延续"
+      key_events:
+        - "高考成绩公布"
+        - "分别考上不同大学"
+        - "承诺保持联系"

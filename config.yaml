@@ -1,0 +1,84 @@
+# AI小说转剧本工具 - 配置文件
+
+# 选择AI提供商：claude, openai, ollama
+ai_provider: "claude"
+
+# 各提供商配置
+providers:
+  # Claude API配置
+  claude:
+    api_key: "${ANTHROPIC_API_KEY}"  # 从环境变量读取，或直接填写密钥
+    model: "claude-sonnet-4-6"       # 模型选择
+    max_tokens: 4096                 # 最大输出token数
+    temperature: 0                   # 温度参数（0=稳定输出）
+
+  # OpenAI API配置
+  openai:
+    api_key: "${OPENAI_API_KEY}"
+    model: "gpt-4"
+    max_tokens: 4096
+    temperature: 0
+
+  # Ollama本地模型配置
+  ollama:
+    base_url: "http://localhost:11434"  # Ollama服务地址
+    model: "llama3"                     # 模型名称
+    max_tokens: 4096
+    temperature: 0
+
+# 剧本生成设置
+script_generation:
+  # 章节处理策略
+  chapter_strategy: "sequential"  # sequential（顺序处理）, parallel（并行处理）
+  batch_size: 1                   # 每次处理的章节数
+
+  # 输出设置
+  output_format: "yaml"           # yaml, json（未来支持）
+  include_metadata: true          # 是否包含元数据
+  include_outline: true           # 是否包含剧情大纲
+
+  # Prompt模板（可自定义）
+  prompt_template: |
+    你是一个专业的剧本改编师。请将以下小说章节转换为YAML格式的剧本。
+
+    要求：
+    1. 识别所有角色并分配唯一ID（格式：char_XXX）
+    2. 将叙述文本转换为场景描述和动作指示
+    3. 提取对话并标注说话角色
+    4. 添加必要的舞台指示和情感描述
+    5. 保持故事节奏和情感张力
+    6. 场景ID格式：scene_XXX
+
+    章节内容：
+    {chapter_content}
+
+    请严格按照以下YAML Schema输出：
+
+    script:
+      metadata:
+        title: "剧本标题"
+        original_novel: "原小说名"
+        chapter: 章节号
+      characters:
+        - id: "char_001"
+          name: "角色名"
+          role: "主角/配角/龙套"
+          description: "简短描述"
+      scenes:
+        - id: "scene_001"
+          location: "场景地点"
+          time: "日/夜/黄昏"
+          description: "场景描述"
+          actions:
+            - type: "dialogue"
+              character_id: "char_001"
+              content: "对话内容"
+              note: "情感或动作指示"
+            - type: "action"
+              content: "动作描述"
+
+# 日志设置
+logging:
+  level: "INFO"         # DEBUG, INFO, WARNING, ERROR
+  format: "console"     # console, file
+  file: "logs/app.log"  # 日志文件路径（如果format=file）

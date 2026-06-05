@@ -1,0 +1,19 @@
+# AI小说转剧本工具 - Python依赖
+
+# 核心依赖
+PyYAML>=6.0                # YAML文件读写
+click>=8.0                 # CLI框架
+rich>=13.0                 # 终端美化输出
+pydantic>=2.0              # 数据验证和Schema定义
+
+# AI模型客户端（可选，根据需要安装）
+anthropic>=0.18.0          # Claude API客户端
+openai>=1.0                # OpenAI API客户端
+
+# 开发和测试（可选）
+pytest>=7.0                # 单元测试框架
+pytest-cov>=4.0            # 测试覆盖率
+
+# 工具库
+python-dotenv>=1.0         # 环境变量管理
+requests>=2.28             # HTTP请求（用于Ollama等）
