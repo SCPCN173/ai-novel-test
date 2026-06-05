@@ -149,7 +149,7 @@ python -m src.main examples/sample_novel.txt -o output/test.yaml --verbose
 
 ## 许可证
 
-MIT License
+无
 
 ## 作者
 
