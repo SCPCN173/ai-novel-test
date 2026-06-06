@@ -19,7 +19,7 @@
 ```bash
 # 克隆项目（如果需要）
 git clone <repository-url>
-cd ai-novel-to-script
+cd ai-novel-test
 
 # 安装依赖
 pip install -r requirements.txt
