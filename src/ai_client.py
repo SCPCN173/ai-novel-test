@@ -95,7 +95,10 @@ class OpenAIProvider(BaseAIProvider):
         super().__init__(config)
         try:
             import openai
-            self.client = openai.OpenAI(api_key=self._get_api_key())
+            self.client = openai.OpenAI(
+                api_key=self._get_api_key(),
+                base_url=self.config.get("base_url", None),
+            )
             self.model = config.get("model", "gpt-4")
         except ImportError:
             raise AIClientError("请安装openai包: pip install openai")
