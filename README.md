@@ -21,7 +21,7 @@
 git clone <repository-url>
 cd ai-novel-test
 
-# 安装依赖
+# 安装依赖 （此处根据需求自行配置，requirements文件仅仅给出版本要求）
 pip install -r requirements.txt
 ```
 
